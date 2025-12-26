@@ -1,0 +1,7 @@
+project_id = "kjajkuhvzgynhvugsuth"
+
+[functions.crypto-prices]
+verify_jwt = false
+
+[functions.crypto-chat]
+verify_jwt = false
