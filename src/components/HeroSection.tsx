@@ -21,7 +21,7 @@ export function HeroSection() {
         <div className="mx-auto max-w-4xl text-center">
           <div className="animate-fade-in mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary">
             <Zap size={14} className="animate-pulse" />
-            AI-Powered Predictions
+            AI-Powered Predictions • 95% Accuracy
           </div>
 
           <h1 className="animate-slide-up mb-4 sm:mb-6 text-3xl sm:text-4xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
