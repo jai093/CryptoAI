@@ -45,7 +45,6 @@ export function AIPredictionCard() {
                 <div className="font-semibold">BUY SIGNAL 📈</div>
                 <div className="text-sm">Predicted price: ${result.predictedPrice.toFixed(2)}</div>
                 <div className="text-sm">Expected gain: +{result.changePercent.toFixed(2)}%</div>
-                <div className="text-sm">Confidence: {result.confidence.toFixed(1)}%</div>
               </div>
             </div>,
             {
@@ -62,7 +61,6 @@ export function AIPredictionCard() {
                 <div className="font-semibold">SELL SIGNAL 📉</div>
                 <div className="text-sm">Predicted price: ${result.predictedPrice.toFixed(2)}</div>
                 <div className="text-sm">Expected loss: {result.changePercent.toFixed(2)}%</div>
-                <div className="text-sm">Confidence: {result.confidence.toFixed(1)}%</div>
               </div>
             </div>,
             {
@@ -76,7 +74,6 @@ export function AIPredictionCard() {
             <div>
               <div className="font-semibold">NEUTRAL SIGNAL ➡️</div>
               <div className="text-sm">Price expected to remain stable</div>
-              <div className="text-sm">Confidence: {result.confidence.toFixed(1)}%</div>
             </div>,
             {
               duration: 6000,
@@ -94,11 +91,6 @@ export function AIPredictionCard() {
   const displayPrediction = prediction || lastPrediction;
   
   const metrics: ModelMetric[] = [
-    { 
-      label: "Confidence", 
-      value: displayPrediction ? `${displayPrediction.confidence.toFixed(1)}%` : "--", 
-      icon: Target 
-    },
     { 
       label: "Change", 
       value: displayPrediction ? `${displayPrediction.changePercent >= 0 ? '+' : ''}${displayPrediction.changePercent.toFixed(2)}%` : "--", 
